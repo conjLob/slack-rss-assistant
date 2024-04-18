@@ -1,0 +1,87 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.7.0/schema.json",
+  "files": {
+    "include": ["**/*.[jt]s", "**/*.[jt]sx", "**/*.[cm][jt]s", "**/*.json"]
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "defaultBranch": "main",
+    "useIgnoreFile": true
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noNewSymbol": "error",
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "off"
+      },
+      "performance": {
+        "noBarrelFile": "error",
+        "noReExportAll": "error"
+      },
+      "style": {
+        "noNamespace": "error",
+        "useConsistentArrayType": "error",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["export", "kebab-case"]
+          }
+        },
+        "useForOf": "error",
+        "useFragmentSyntax": "error",
+        "useNamingConvention": "error",
+        "useNodeAssertStrict": "error",
+        "useShorthandAssign": "error"
+      },
+      "suspicious": {
+        "noConsoleLog": "error",
+        "noEmptyBlockStatements": "error",
+        "noSkippedTests": "error",
+        "useAwait": "error"
+      },
+      "nursery": {
+        "all": true,
+        "noConsole": "off",
+        "noNodejsModules": "off",
+        "useImportRestrictions": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": ["**/*.d.[jt]s"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNamespace": "off"
+          }
+        }
+      }
+    }
+  ]
+}

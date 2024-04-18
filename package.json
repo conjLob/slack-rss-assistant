@@ -6,9 +6,11 @@
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "start": "wrangler dev",
-    "test": "vitest"
+    "test": "vitest",
+    "lint:ts": "tsc && biome check"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.0",
     "@cloudflare/vitest-pool-workers": "^0.1.0",
     "@cloudflare/workers-types": "^4.20240405.0",
     "typescript": "^5.0.4",
