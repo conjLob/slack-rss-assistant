@@ -8,9 +8,11 @@
     "node": "^20.12.2"
   },
   "packageManager": "pnpm@9.0.2+sha256.d6fc013639b81658ff175829ebb9435bcb89eff206769e460fd3ae27c2054df6",
+  "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist",
     "dev": "wrangler dev",
     "start": "wrangler dev",
     "test": "vitest",
