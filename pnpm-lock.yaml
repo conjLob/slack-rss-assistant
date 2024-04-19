@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      slack-cloudflare-workers:
+        specifier: ^0.10.6
+        version: 0.10.6
     devDependencies:
       '@biomejs/biome':
         specifier: 1.7.0
@@ -1004,6 +1008,15 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  slack-cloudflare-workers@0.10.6:
+    resolution: {integrity: sha512-LOsJQaCwjlgeuVsB1/RLWEUTDM4X5Qt0uieP+g6vLho473EjklhiNl8RcN3KkUMzvdMPsaW+hudrqFpM26J/lQ==}
+
+  slack-edge@0.10.10:
+    resolution: {integrity: sha512-ttfJpTomf/OgSq0CJjzaJto5RAH75kEu2KXsf9yv0lIqaSSQCAd6WNMRB1eVQARbHTRPJzh7PKi0JbofAI6XhQ==}
+
+  slack-web-api-client@0.10.5:
+    resolution: {integrity: sha512-vZjBuWMyzbGHbtO4sbLIGXqbykykyI1IwOxdNhjtPKfLGKTpo0B7jURzZZiVJ1fpaavTfl5CFmAsyeG809kkuA==}
 
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
@@ -2030,6 +2043,16 @@ snapshots:
   siginfo@2.0.0: {}
 
   signal-exit@4.1.0: {}
+
+  slack-cloudflare-workers@0.10.6:
+    dependencies:
+      slack-edge: 0.10.10
+
+  slack-edge@0.10.10:
+    dependencies:
+      slack-web-api-client: 0.10.5
+
+  slack-web-api-client@0.10.5: {}
 
   source-map-js@1.2.0: {}
 

@@ -18,6 +18,9 @@
     "test": "vitest",
     "lint:ts": "tsc && biome check"
   },
+  "dependencies": {
+    "slack-cloudflare-workers": "^0.10.6"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.7.0",
     "@cloudflare/vitest-pool-workers": "^0.2.0",
