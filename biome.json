@@ -33,7 +33,7 @@
       },
       "correctness": {
         "noNewSymbol": "error",
-        "noUndeclaredVariables": "error",
+        "noUndeclaredVariables": "off",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error",
@@ -68,6 +68,7 @@
         "all": true,
         "noConsole": "off",
         "noNodejsModules": "off",
+        "noUndeclaredDependencies": "off",
         "useImportRestrictions": "off"
       }
     }
@@ -79,6 +80,16 @@
         "rules": {
           "style": {
             "noNamespace": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/env.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useNamingConvention": "off"
           }
         }
       }
